@@ -4,9 +4,10 @@ jrebel-vagrant
 This is a simple test I did to see if you can run JRebel in combination with vagrant.
 
 **GOAL** - Setup a development environment where I can code in a familiar 
-environment (**Eclipse**, **MacOS X**) while running my code in a controlled, 
-server like environment, in this case **CentOS**. All this while still enjoying 
-the benefints of **JRebel** - *Zero downtime, code-save-reload* etc. 
+environment (**Eclipse**, **MacOS X**) while running my code in a **vagrant-** 
+and **puppet-**controlled, server like environment, in this case **CentOS**. 
+All this while still enjoying the benefints of **JRebel** - *Zero downtime, 
+code-save-reload* etc. 
 
 Since I can't redistribute JRebel you will have to do some changes here. 
 

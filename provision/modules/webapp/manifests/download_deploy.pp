@@ -1,21 +1,33 @@
 define webapp::download_deploy($warurl = "", $context = "") {
 
-	include devtools
+	$dldir = "/opt/download"
+
+	package { "wget": 
+		ensure		=> present
+	}
 	
-	$tempdir = "/tmp"
+	
 	
 	Exec { 
    		path		=> "/bin:/usr/bin:/sbin:/usr/sbin" 
   	}
+  	
+  	file { "${dldir}" :
+  		ensure		=> directory,
+  		owner		=> root,
+  		group		=> root,
+  		mode		=> 755
+  	}
 
   	exec { "download-${context}" :
 		command		=> "rm -f ${context}.war && wget ${warurl} -O ${context}.war",
-		cwd			=> $tempdir,
- 		user		=> root 
+		cwd			=> $dldir,
+ 		user		=> root,
+ 		require		=> [File["${dldir}"],Package["wget"]]
   	}
 
 	tomcat7::wardeploy { "${context}": 
-		warfile		=> "${tempdir}/${context}.war",
+		warfile		=> "${dldir}/${context}.war",
 		context		=> $context,
 		require		=> Exec["download-${context}"]
 	}

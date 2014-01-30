@@ -31,7 +31,7 @@ SillyServlet.java and reload the page. Changes should be immediate. No redeploy.
 Puppet stuff
 ============
 
-I'm not *master of puppet*. The puppet manifests and modules included in ths 
+I'm not a *master of puppet*. The puppet manifests & modules included in this 
 repo are probably considered rather crufty. What I have attempted to do is to 
 show that it is possible to keep development and production stuff in the same 
 code repository.

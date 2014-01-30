@@ -9,8 +9,7 @@ define webapp::download_deploy($warurl = "", $context = "") {
   	}
 
   	exec { "download-${context}" :
-		#command	=> "rm -f ${context}.war && wget ${warurl} -O ${context}.war",
-		command		=> "rm -f ${context}.war && cp -v ${warurl} ${context}.war",
+		command		=> "rm -f ${context}.war && wget ${warurl} -O ${context}.war",
 		cwd			=> $tempdir,
  		user		=> root 
   	}

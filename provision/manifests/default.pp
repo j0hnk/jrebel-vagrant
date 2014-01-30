@@ -37,9 +37,8 @@ node "prod.slasktratt.se" {
 	}
 	
 	webapp::download_deploy { "jrebel-vagrant" :
-		#warurl 	=>	"http://www.uu.se/files/dist/vagrant-demo-1.0.0.war",
-		warurl 		=>	"/vagrant/target/jrebel-vagrant-1.0.0.war",
-		context		=>	"vagrant-demo"
+		warurl 	=>	"https://raw.github.com/j0hnk/jrebel-vagrant/master/provision/modules/webapp/files/jrebel-vagrant-1.0.0.war",
+		context	=>	"jrebel-vagrant"
 	}
 	
 }

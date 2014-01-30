@@ -3,5 +3,3 @@
 .project
 .vagrant
 target
-
-provision/modules/tomcat7/files/jrebel/jrebel-dist/jrebel.jar

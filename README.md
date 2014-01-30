@@ -3,7 +3,10 @@ jrebel-vagrant
 
 This is a simple test I did to see if you can run JRebel in combination with vagrant.
 
-**GOAL** - Setup a development environment where I can code in a familiar 
+Goal
+----
+
+The goal was to setup a development environment where I can code in a familiar 
 environment (**Eclipse**, **MacOS X**) while running my code in a **vagrant-** 
 and **puppet-**controlled, server like environment, in this case **CentOS**. 
 All this while still enjoying the benefints of **JRebel** - *Zero downtime, 
@@ -30,18 +33,18 @@ You should see some rather boring output there. Try changing the servlet class
 SillyServlet.java and reload the page. Changes should be immediate. No redeploy.
 
 Puppet stuff
-============
+------------
 
 I'm not a *master of puppet*. The puppet manifests & modules included in this 
 repo are probably considered rather crufty. What I have attempted to do is to 
 show that it is possible to keep development and production stuff in the same 
-code repository. 
+code repository. This was handy for a short in-house demo of the concept. 
 
 I've tried to create a really simple tomcat module. It can install tomcat and 
-deploy applications that's all. That's usually all I want too.
+deploy applications that's all. That's usually all I want to do.
 
 Conclusions
-===========
+-----------
 
 This seems to work as intended! By using the shared folder between the vagrant 
 VM and the host, JRebel is able to pick up any code changes performed in Eclipse.
@@ -49,3 +52,6 @@ VM and the host, JRebel is able to pick up any code changes performed in Eclipse
 So I get all the benefits from all the tools. No real drawbacks found so far. 
 One possible drawback could be that each time you provision a new VM you will 
 probably checkout a license seat from the JRebel license server.... :-)
+
+You should probably check out JRebel Remoting for a similar, but better, approach. 
+http://zeroturnaround.com/software/jrebel/learn/remoting/

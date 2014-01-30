@@ -27,3 +27,11 @@ $ vagrant up dev
 Once the machine is up you can try to access http://127.0.0.1:8080/jrebel-vagrant. 
 You should see some rather boring output there. Try changing the servlet class 
 SillyServlet.java and reload the page. Changes should be immediate. No redeploy.
+
+Puppet stuff
+============
+
+I'm not *master of puppet*. The puppet manifests and modules included in ths 
+repo are probably considered rather crufty. What I have attempted to do is to 
+show that it is possible to keep development and production stuff in the same 
+code repository.
